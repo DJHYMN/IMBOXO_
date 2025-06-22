@@ -2,181 +2,139 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>IMBOXO – Sakura</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sakura – Creator Spotlight</title>
   <style>
     body {
       margin: 0;
       background-color: #0a0a0a;
       font-family: 'Helvetica Neue', sans-serif;
-      color: #ffffff;
+      color: white;
     }
-
     header {
-      background-color: #000;
+      background-color: #0a0a0a;
       padding: 20px 40px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #32004d;
     }
-
     header .logo {
       font-size: 24px;
+      color: white;
       font-weight: bold;
+      transition: all 0.3s ease-in-out;
+      text-shadow: 0 0 10px rgba(154, 0, 230, 0.3);
     }
-
-    nav a {
-      color: #ccc;
+    header .logo:hover {
+      transform: scale(1.08);
+      text-shadow: 0 0 20px rgba(154, 0, 230, 0.6);
+    }
+    header nav a {
+      color: white;
       text-decoration: none;
-      margin-left: 20px;
+      margin-left: 24px;
       font-size: 16px;
+      transition: color 0.3s ease;
     }
-
-    nav a:hover {
-      color: #b266ff;
+    header nav a:hover {
+      color: #9a00e6;
     }
-
-    .creator-section {
+    .container {
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .header {
       display: flex;
       align-items: center;
-      padding: 40px;
       gap: 40px;
-      border-bottom: 1px solid #3a3a3a;
+      flex-wrap: wrap;
     }
-
-    .creator-image {
-      width: 160px;
-      height: 160px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 25px #b266ff;
-    }
-
-    .creator-image img {
-      width: 100%;
-      height: 100%;
+    .creator-photo {
+      border-radius: 16px;
+      width: 200px;
+      height: 200px;
       object-fit: cover;
+      box-shadow: 0 0 12px #32004d;
+      transition: all 0.4s ease-in-out;
     }
-
-    .creator-info h1 {
-      font-size: 32px;
-      margin-bottom: 8px;
+    .creator-photo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #9a00e6, 0 0 15px #4c0070 inset;
+      filter: brightness(1.1) saturate(1.3);
     }
-
-    .creator-info p {
-      margin: 6px 0;
-      color: #bbb;
+    .main-info h1 {
+      font-size: 48px;
+      margin: 0;
+      color: #ffffff;
     }
-
+    .main-info p {
+      font-size: 16px;
+      color: #ccc;
+      margin-top: 6px;
+    }
     .buttons {
-      margin-top: 20px;
+      margin-top: 24px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
     }
-
     .buttons button {
-      background-color: #7c3aed;
+      background-color: #32004d;
       color: white;
       border: none;
-      padding: 10px 20px;
-      margin-right: 10px;
-      border-radius: 6px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
       cursor: pointer;
-      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
-
     .buttons button:hover {
-      background-color: #9a4dff;
+      background-color: #5a0080;
+      transform: translateY(-2px);
     }
-
-    .section {
-      padding: 40px;
-      border-bottom: 1px solid #333;
+    .meta-section, .projects-section {
+      margin-top: 40px;
     }
-
-    .section h2 {
+    .meta-section h2, .projects-section h2 {
       font-size: 24px;
-      margin-bottom: 20px;
+      border-bottom: 1px solid #32004d;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      color: #ffffff;
     }
-
-    .profile-tiles {
+    .meta-list, .project-thumbnails {
       display: flex;
-      gap: 20px;
-      margin-top: 20px;
       flex-wrap: wrap;
-    }
-
-    .tile {
-      background-color: #1e1e1e;
-      padding: 16px 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #2e2e2e;
-      flex: 1;
-      min-width: 200px;
-    }
-
-    .tile strong {
-      display: block;
-      color: #b266ff;
-      margin-bottom: 8px;
-    }
-
-    .projects {
-      display: flex;
       gap: 24px;
-      flex-wrap: wrap;
     }
-
-    .project-card {
-      background-color: #121212;
-      border-radius: 12px;
-      overflow: hidden;
-      width: 220px;
-      box-shadow: 0 0 12px #32004d;
-      transition: transform 0.3s ease;
-    }
-
-    .project-card:hover {
-      transform: scale(1.03);
-    }
-
-    .project-card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-    }
-
-    .project-details {
+    .meta-item {
+      background-color: #140022;
       padding: 16px;
+      border-radius: 12px;
+      width: 250px;
+      border: 1px solid #250038;
     }
-
-    .project-details h4 {
-      margin: 0;
-      font-size: 18px;
+    .meta-item strong {
+      color: #b266ff;
     }
-
-    .project-details p {
-      margin-top: 6px;
-      font-size: 14px;
-      color: #ccc;
+    .thumbnail {
+      width: 180px;
+      height: 270px;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 0 10px #250038;
+      transition: all 0.3s ease-in-out;
     }
-
-    @media (max-width: 768px) {
-      .creator-section {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .buttons button {
-        margin: 10px 5px 0;
-      }
-
-      .projects {
-        justify-content: center;
-      }
+    .thumbnail:hover {
+      transform: scale(1.08) rotate(1deg);
+      box-shadow: 0 0 25px #8a00c2, 0 0 15px #3c0068 inset;
+      filter: brightness(1.1) contrast(1.05);
     }
   </style>
 </head>
 <body>
-
   <header>
     <div class="logo">IMBOXO</div>
     <nav>
@@ -188,75 +146,55 @@
     </nav>
   </header>
 
-  <section class="creator-section">
-    <div class="creator-image">
-      <img src="assets/Sakura/avatar.png" alt="Sakura portrait">
-    </div>
-    <div class="creator-info">
-      <h1>Sakura</h1>
-      <p>Filmmaker · Storyteller · Visual Artist</p>
-      <p>Active Since: 2017 · Genre Focus: Short Films · Documentaries · Art Films</p>
-      <div class="buttons">
-        <button>Support This Creator</button>
-        <button>Add to My Watchlist</button>
-        <button>Share Profile</button>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>About Sakura</h2>
-    <p>
-      Sakura is an independent filmmaker and multimedia creator known for her emotionally resonant storytelling, experimental visuals, and global perspective. Her work often explores identity, memory, and the poetic in everyday life.
-    </p>
-  </section>
-
-  <section class="section">
-    <h2>Creative Profile</h2>
-    <div class="profile-tiles">
-      <div class="tile">
-        <strong>Languages:</strong>
-        English, Japanese, Visual Narrative
-      </div>
-      <div class="tile">
-        <strong>Signature Style:</strong>
-        Minimalist · Surreal · Emotional Realism
-      </div>
-      <div class="tile">
-        <strong>Festival Features:</strong>
-        Sundance · Short of the Week · BFI Flare
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Featured Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <img src="assets/Sakura/thumb1.png" alt="Audition Thumbnail">
-        <div class="project-details">
-          <h4>Audition (2019)</h4>
-          <p>A tense, surreal short exploring identity through the lens of performance and memory.</p>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="assets/Sakura/thumb2.png" alt="Midnight River Thumbnail">
-        <div class="project-details">
-          <h4>Midnight River (2021)</h4>
-          <p>A dreamlike meditation on solitude, time, and the flow of emotion beneath silence.</p>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="assets/Sakura/thumb3.png" alt="Ichi The Killer Thumbnail">
-        <div class="project-details">
-          <h4>Memory Echo (2022)</h4>
-          <p>An intimate short capturing fleeting connections and lost stories across generations.</p>
+  <div class="container">
+    <div class="header">
+      <img class="creator-photo" src="assets/Sakura/avatar.png" alt="Sakura portrait">
+      <div class="main-info">
+        <h1>Sakura</h1>
+        <p>Filmmaker · Storyteller · Visual Artist</p>
+        <p>Active Since: 2017 · Genre Focus: Short Films · Documentaries · Art Films</p>
+        <div class="buttons">
+          <button>Support This Creator</button>
+          <button>Add to My Watchlist</button>
+          <button>Share Profile</button>
         </div>
       </div>
     </div>
-  </section>
 
+    <div class="meta-section">
+      <h2>About Sakura</h2>
+      <p>
+        Sakura is an independent filmmaker and multimedia creator known for her emotionally resonant storytelling,
+        experimental visuals, and global perspective. Her work often explores identity, memory, and the poetic in everyday life.
+      </p>
+    </div>
+
+    <div class="meta-section">
+      <h2>Creative Profile</h2>
+      <div class="meta-list">
+        <div class="meta-item">
+          <strong>Languages:</strong><br>
+          English, Japanese, Visual Narrative
+        </div>
+        <div class="meta-item">
+          <strong>Signature Style:</strong><br>
+          Minimalist · Surreal · Emotional Realism
+        </div>
+        <div class="meta-item">
+          <strong>Festival Features:</strong><br>
+          Sundance · Short of the Week · BFI Flare
+        </div>
+      </div>
+    </div>
+
+    <div class="projects-section">
+      <h2>Featured Projects</h2>
+      <div class="project-thumbnails">
+        <img class="thumbnail" src="assets/Sakura/thumb1.png" alt="Audition Thumbnail">
+        <img class="thumbnail" src="assets/Sakura/thumb2.png" alt="The Snow Woman Thumbnail">
+        <img class="thumbnail" src="assets/Sakura/thumb3.png" alt="Ichi The Killer Thumbnail">
+      </div>
+    </div>
+  </div>
 </body>
 </html>
