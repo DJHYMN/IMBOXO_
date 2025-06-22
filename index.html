@@ -1,97 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>IMBOXO</title>
   <style>
     body {
       margin: 0;
-      background-color: #000;
-      color: #fff;
+      background-color: #0b0b0b;
       font-family: Arial, sans-serif;
+      color: #fff;
     }
-
     header {
-      padding: 20px;
       background-color: #111;
+      padding: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 2px solid #32004d;
+      border-bottom: 2px solid #7300e6;
     }
-
     header h1 {
-      color: #c58aff;
-      font-size: 24px;
       margin: 0;
+      color: #c47bff;
+      font-size: 24px;
     }
-
     nav a {
+      color: #fff;
       margin-left: 20px;
       text-decoration: none;
-      color: #fff;
       font-weight: bold;
     }
-
-    section {
-      padding: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
+    .section {
+      padding: 40px 20px 20px 20px;
     }
-
-    h2 {
-      color: #fff;
+    .section h2 {
+      margin-bottom: 20px;
       font-size: 20px;
-      margin-bottom: 10px;
     }
-
-    .section-grid {
+    .scrolling-row {
       display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
+      gap: 20px;
+      overflow-x: auto;
+      padding-bottom: 10px;
     }
-
-   .creator-photo {
-  border-radius: 16px;
-  width: 220px; /* was 200px */
-  height: 220px;
-  object-fit: cover;
-  box-shadow: 0 0 12px #32004d;
-  transition: all 0.4s ease-in-out;
-}
-
-
+    .creator-photo {
+      border-radius: 16px;
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      box-shadow: 0 0 15px #7200a8;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+    }
     .creator-photo:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 30px #9a00e6, 0 0 15px #4c0070 inset;
+      box-shadow: 0 0 30px #c47bff, 0 0 20px #7a00cc inset;
       filter: brightness(1.1) saturate(1.3);
     }
-
-    .timeline-img {
-      width: 220px;
-      height: 330px;
+    .timeline-poster {
+      width: 180px;
+      height: 270px;
       object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #333;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.5);
       transition: transform 0.3s ease;
     }
-
-    .timeline-img:hover {
-      transform: scale(1.05);
+    .timeline-poster:hover {
+      transform: scale(1.03);
     }
-
     .discovery-thumb {
       width: 220px;
       height: 140px;
       object-fit: cover;
       border-radius: 8px;
-      box-shadow: 0 0 10px #222;
+      box-shadow: 0 0 8px rgba(0,0,0,0.4);
       transition: transform 0.3s ease;
     }
-
     .discovery-thumb:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
+    }
+    a {
+      text-decoration: none;
     }
   </style>
 </head>
@@ -104,42 +92,51 @@
       <a href="#">Creators</a>
       <a href="#">Timelines</a>
       <a href="#">Discovery</a>
-      <a href="#">About</a>
     </nav>
   </header>
 
-  <section>
+  <div class="section">
     <h2>Creators</h2>
-    <div class="section-grid">
-      <a href="assets/Sakura/creator_sakura.html"><img src="assets/Home/avatar.png" alt="Sakura" class="creator-photo" /></a>
-      <img src="assets/Home/AvatarB.png" alt="Creator B" class="creator-photo" />
-      <img src="assets/Home/AvatarC.png" alt="Creator C" class="creator-photo" />
-      <img src="assets/Home/AvatarE.png" alt="Creator D" class="creator-photo" />
-      <img src="assets/Home/Avatar D.png" alt="Creator E" class="creator-photo" />
+    <div class="scrolling-row">
+      <a href="creator_sakura.html">
+        <img src="assets/creators/sakura.jpg" alt="Sakura" class="creator-photo">
+      </a>
+      <a href="#">
+        <img src="assets/creators/creator2.jpg" alt="Creator 2" class="creator-photo">
+      </a>
+      <a href="#">
+        <img src="assets/creators/creator3.jpg" alt="Creator 3" class="creator-photo">
+      </a>
+      <a href="#">
+        <img src="assets/creators/creator4.jpg" alt="Creator 4" class="creator-photo">
+      </a>
+      <a href="#">
+        <img src="assets/creators/creator5.jpg" alt="Creator 5" class="creator-photo">
+      </a>
     </div>
-  </section>
+  </div>
 
-  <section>
+  <div class="section">
     <h2>Timelines</h2>
-    <div class="section-grid">
-      <img src="assets/Home/timeline_1.png" alt="Timeline 1" class="timeline-img" />
-      <img src="assets/Home/timeline_2.png" alt="Timeline 2" class="timeline-img" />
-      <img src="assets/Home/timeline_3.png" alt="Timeline 3" class="timeline-img" />
-      <img src="assets/Home/timeline_4.png" alt="Timeline 4" class="timeline-img" />
-      <img src="assets/Home/timeline_5.png" alt="Timeline 5" class="timeline-img" />
+    <div class="scrolling-row">
+      <img src="assets/timelines/pearl.jpg" alt="Pearl" class="timeline-poster">
+      <img src="assets/timelines/duo.jpg" alt="Duo" class="timeline-poster">
+      <img src="assets/timelines/thing.jpg" alt="The Thing" class="timeline-poster">
+      <img src="assets/timelines/dramagirl.jpg" alt="Drama Girl" class="timeline-poster">
+      <img src="assets/timelines/futurepunk.jpg" alt="Futurepunk" class="timeline-poster">
     </div>
-  </section>
+  </div>
 
-  <section>
+  <div class="section">
     <h2>Discovery Zone</h2>
-    <div class="section-grid">
-      <img src="assets/Home/discovery_1.png" alt="Discovery 1" class="discovery-thumb" />
-      <img src="assets/Home/discovery_2.png" alt="Discovery 2" class="discovery-thumb" />
-      <img src="assets/Home/discovery_3.png" alt="Discovery 3" class="discovery-thumb" />
-      <img src="assets/Home/discovery_4.png" alt="Discovery 4" class="discovery-thumb" />
-      <img src="assets/Home/discovery_5.png" alt="Discovery 5" class="discovery-thumb" />
+    <div class="scrolling-row">
+      <img src="assets/discovery/bot1.jpg" alt="Bot 1" class="discovery-thumb">
+      <img src="assets/discovery/bot2.jpg" alt="Bot 2" class="discovery-thumb">
+      <img src="assets/discovery/bot3.jpg" alt="Bot 3" class="discovery-thumb">
+      <img src="assets/discovery/bot4.jpg" alt="Bot 4" class="discovery-thumb">
+      <img src="assets/discovery/bot5.jpg" alt="Bot 5" class="discovery-thumb">
     </div>
-  </section>
+  </div>
 
 </body>
 </html>
