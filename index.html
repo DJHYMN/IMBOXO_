@@ -28,34 +28,41 @@
       margin-left: 20px;
       margin-top: 60px;
     }
-    .creator-grid, .timeline-grid, .discovery-grid {
+    .section {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       padding: 20px;
       gap: 20px;
     }
-    .creator-tile img {
-      width: 150px;
-      height: 150px;
+    .avatar {
+      width: 140px;
+      height: 140px;
       object-fit: cover;
       border-radius: 50%;
-      border: 3px solid #9c27b0;
+      border: 4px solid #b83eff;
+      box-shadow: 0 0 12px #b83eff;
       transition: transform 0.3s;
     }
-    .creator-tile img:hover {
+    .avatar:hover {
       transform: scale(1.05);
     }
-    .poster-tile img {
+    .poster {
       width: 200px;
       height: 320px;
       object-fit: cover;
-      border-radius: 12px;
-      border: 2px solid #9c27b0;
+      border-radius: 10px;
+      border: 2px solid #b83eff;
+      box-shadow: 0 0 10px #b83eff;
       transition: transform 0.3s;
     }
-    .poster-tile img:hover {
+    .poster:hover {
       transform: scale(1.02);
+    }
+    .label {
+      text-align: center;
+      margin-top: 8px;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -73,30 +80,30 @@
   </header>
 
   <h2>Creators</h2>
-  <div class="creator-grid">
-    <a href="Sakura/creator_sakura.html" class="creator-tile"><img src="assets/Home/avatar.png" alt="Sakura"></a>
-    <div class="creator-tile"><img src="assets/Home/AvatarB.png" alt="Jordan"></div>
-    <div class="creator-tile"><img src="assets/Home/AvatarC.png" alt="Lex"></div>
-    <div class="creator-tile"><img src="assets/Home/Avatar D.png" alt="Nova"></div>
-    <div class="creator-tile"><img src="assets/Home/AvatarE.png" alt="Zion"></div>
+  <div class="section">
+    <a href="Sakura/creator_sakura.html"><img class="avatar" src="assets/Home/avatar.png" alt="Sakura"></a>
+    <div><img class="avatar" src="assets/Home/AvatarB.png" alt="Jordan"><div class="label">Jordan</div></div>
+    <div><img class="avatar" src="assets/Home/AvatarC.png" alt="Lex"><div class="label">Lex</div></div>
+    <div><img class="avatar" src="assets/Home/Avatar D.png" alt="Nova"><div class="label">Nova</div></div>
+    <div><img class="avatar" src="assets/Home/AvatarE.png" alt="Zion"><div class="label">Zion</div></div>
   </div>
 
   <h2>Timelines</h2>
-  <div class="timeline-grid">
-    <div class="poster-tile"><img src="assets/Home/timeline_1.png" alt="Timeline 1"></div>
-    <div class="poster-tile"><img src="assets/Home/timeline_2.png" alt="Timeline 2"></div>
-    <div class="poster-tile"><img src="assets/Home/timeline_3.png" alt="Timeline 3"></div>
-    <div class="poster-tile"><img src="assets/Home/timeline_4.png" alt="Timeline 4"></div>
-    <div class="poster-tile"><img src="assets/Home/timeline_5.png" alt="Timeline 5"></div>
+  <div class="section">
+    <div><img class="poster" src="assets/Home/timeline_1.png" alt="Timeline 1"><div class="label">Timeline 1</div></div>
+    <div><img class="poster" src="assets/Home/timeline_2.png" alt="Timeline 2"><div class="label">Timeline 2</div></div>
+    <div><img class="poster" src="assets/Home/timeline_3.png" alt="Timeline 3"><div class="label">Timeline 3</div></div>
+    <div><img class="poster" src="assets/Home/timeline_4.png" alt="Timeline 4"><div class="label">Timeline 4</div></div>
+    <div><img class="poster" src="assets/Home/timeline_5.png" alt="Timeline 5"><div class="label">Timeline 5</div></div>
   </div>
 
   <h2>Discovery Zone</h2>
-  <div class="discovery-grid">
-    <div class="poster-tile"><img src="assets/Home/discovery_1.png" alt="Discovery 1"></div>
-    <div class="poster-tile"><img src="assets/Home/discovery_2.png" alt="Discovery 2"></div>
-    <div class="poster-tile"><img src="assets/Home/discovery_3.png" alt="Discovery 3"></div>
-    <div class="poster-tile"><img src="assets/Home/discovery_4.png" alt="Discovery 4"></div>
-    <div class="poster-tile"><img src="assets/Home/discovery_5.png" alt="Discovery 5"></div>
+  <div class="section">
+    <div><img class="poster" src="assets/Home/discovery_1.png" alt="Discovery 1"><div class="label">Discovery 1</div></div>
+    <div><img class="poster" src="assets/Home/discovery_2.png" alt="Discovery 2"><div class="label">Discovery 2</div></div>
+    <div><img class="poster" src="assets/Home/discovery_3.png" alt="Discovery 3"><div class="label">Discovery 3</div></div>
+    <div><img class="poster" src="assets/Home/discovery_4.png" alt="Discovery 4"><div class="label">Discovery 4</div></div>
+    <div><img class="poster" src="assets/Home/discovery_5.png" alt="Discovery 5"><div class="label">Discovery 5</div></div>
   </div>
 
 </body>
