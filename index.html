@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>IMBOXO - Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IMBOXO – Home</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
       background-color: #0a0a0a;
+      font-family: 'Helvetica Neue', sans-serif;
       color: white;
     }
     header {
@@ -19,75 +19,79 @@
       justify-content: space-between;
       border-bottom: 1px solid #32004d;
     }
-    .logo {
+    header .logo {
       font-size: 24px;
+      color: white;
       font-weight: bold;
-      text-shadow: 0 0 10px rgba(154, 0, 230, 0.5);
+      transition: all 0.3s ease-in-out;
+      text-shadow: 0 0 10px rgba(154, 0, 230, 0.6);
     }
-    nav a {
+    header .logo:hover {
+      transform: scale(1.1);
+      text-shadow: 0 0 20px rgba(154, 0, 230, 0.8);
+    }
+    header nav a {
       color: white;
       text-decoration: none;
       margin-left: 24px;
       font-size: 16px;
+      transition: color 0.3s ease;
     }
-    nav a:hover {
+    header nav a:hover {
       color: #9a00e6;
     }
-
-    .section {
+    .container {
       padding: 40px;
-      max-width: 1200px;
+      max-width: 1400px;
       margin: auto;
     }
-    h2 {
-      margin-bottom: 24px;
+    .section-title {
       font-size: 24px;
+      color: white;
+      margin-bottom: 20px;
       border-bottom: 1px solid #32004d;
       padding-bottom: 8px;
     }
-    .grid {
+    .creator-grid, .timeline-grid, .discovery-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 24px;
+      margin-bottom: 60px;
     }
-
-    .card {
-      background-color: #140022;
-      border: 1px solid #250038;
-      border-radius: 20px;
-      padding: 16px;
-      text-align: center;
-      width: 160px;
+    .creator-tile, .poster-tile {
+      width: 220px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 12px #32004d;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      position: relative;
     }
-
-    .card img {
-      width: 120px;
-      height: 120px;
-      border-radius: 20px;
+    .creator-tile img, .poster-tile img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      box-shadow: 0 0 15px #32004d;
-      transition: transform 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      border-radius: 12px;
     }
-
-    .card img:hover {
+    .creator-tile:hover, .poster-tile:hover {
+      box-shadow: 0 0 30px #9a00e6, 0 0 15px #4c0070 inset;
+    }
+    .creator-tile:hover img,
+    .discovery-grid .poster-tile:hover img {
+      filter: brightness(1.1) saturate(1.3);
+      transform: scale(1.08);
+    }
+    .timeline-grid .poster-tile:hover img {
       transform: scale(1.05);
-      box-shadow: 0 0 25px #9a00e6, 0 0 12px #4c0070 inset;
+      filter: brightness(1.05) saturate(1.05);
     }
-
-    .card p {
-      margin-top: 12px;
-      font-size: 14px;
-    }
-
-    .portrait {
-      width: 120px;
-      height: 180px;
-      border-radius: 20px;
+    .discovery-grid .poster-tile:hover img {
+      opacity: 0.8;
     }
   </style>
 </head>
 <body>
-
   <header>
     <div class="logo">IMBOXO</div>
     <nav>
@@ -99,53 +103,33 @@
     </nav>
   </header>
 
-  <div class="section">
-    <h2>Top Creators</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="assets/Home/avatar.png" alt="Sakura">
-        <p><strong>Sakura</strong></p>
-      </div>
-      <div class="card">
-        <img src="assets/Home/AvatarB.png" alt="Jordan">
-        <p>Jordan</p>
-      </div>
-      <div class="card">
-        <img src="assets/Home/AvatarC.png" alt="Lex">
-        <p>Lex</p>
-      </div>
-      <div class="card">
-        <img src="assets/Home/Avatar D.png" alt="Riley">
-        <p>Riley</p>
-      </div>
-      <div class="card">
-        <img src="assets/Home/AvatarE.png" alt="Taylor">
-        <p>Taylor</p>
-      </div>
+  <div class="container">
+    <h2 class="section-title">Creators</h2>
+    <div class="creator-grid">
+      <a href="creator1.html" class="creator-tile"><img src="home_assets/avatar1.png" alt="Creator 1"></a>
+      <a href="creator2.html" class="creator-tile"><img src="home_assets/avatar2.png" alt="Creator 2"></a>
+      <a href="creator3.html" class="creator-tile"><img src="home_assets/avatar3.png" alt="Creator 3"></a>
+      <a href="creator4.html" class="creator-tile"><img src="home_assets/avatar4.png" alt="Creator 4"></a>
+      <a href="creator5.html" class="creator-tile"><img src="home_assets/avatar5.png" alt="Creator 5"></a>
+    </div>
+
+    <h2 class="section-title">Timelines</h2>
+    <div class="timeline-grid">
+      <div class="poster-tile"><img src="poster_assets/timeline_1.png" alt="Timeline 1"></div>
+      <div class="poster-tile"><img src="poster_assets/timeline_2.png" alt="Timeline 2"></div>
+      <div class="poster-tile"><img src="poster_assets/timeline_3.png" alt="Timeline 3"></div>
+      <div class="poster-tile"><img src="poster_assets/timeline_4.png" alt="Timeline 4"></div>
+      <div class="poster-tile"><img src="poster_assets/timeline_5.png" alt="Timeline 5"></div>
+    </div>
+
+    <h2 class="section-title">Discovery Zone</h2>
+    <div class="discovery-grid">
+      <div class="poster-tile"><img src="poster_assets/discovery_1.png" alt="Discovery 1"></div>
+      <div class="poster-tile"><img src="poster_assets/discovery_2.png" alt="Discovery 2"></div>
+      <div class="poster-tile"><img src="poster_assets/discovery_3.png" alt="Discovery 3"></div>
+      <div class="poster-tile"><img src="poster_assets/discovery_5.png" alt="Discovery 5"></div>
+      <div class="poster-tile"><img src="poster_assets/discovery_6.png" alt="Discovery 6"></div>
     </div>
   </div>
-
-  <div class="section">
-    <h2>Featured Timelines</h2>
-    <div class="grid">
-      <div class="card"><img class="portrait" src="assets/Home/timeline_1.png" alt="Timeline 1"><p>Timeline 1</p></div>
-      <div class="card"><img class="portrait" src="assets/Home/timeline_2.png" alt="Timeline 2"><p>Timeline 2</p></div>
-      <div class="card"><img class="portrait" src="assets/Home/timeline_3.png" alt="Timeline 3"><p>Timeline 3</p></div>
-      <div class="card"><img class="portrait" src="assets/Home/timeline_4.png" alt="Timeline 4"><p>Timeline 4</p></div>
-      <div class="card"><img class="portrait" src="assets/Home/timeline_5.png" alt="Timeline 5"><p>Timeline 5</p></div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Discovery Zone</h2>
-    <div class="grid">
-      <div class="card"><img class="portrait" src="assets/Home/discovery_1.png" alt="Discovery 1"><p>Discovery 1</p></div>
-      <div class="card"><img class="portrait" src="assets/Home/discovery_2.png" alt="Discovery 2"><p>Discovery 2</p></div>
-      <div class="card"><img class="portrait" src="assets/Home/discovery_3.png" alt="Discovery 3"><p>Discovery 3</p></div>
-      <div class="card"><img class="portrait" src="assets/Home/discovery_4.png" alt="Discovery 4"><p>Discovery 4</p></div>
-      <div class="card"><img class="portrait" src="assets/Home/discovery_5.png" alt="Discovery 5"><p>Discovery 5</p></div>
-    </div>
-  </div>
-
 </body>
 </html>
