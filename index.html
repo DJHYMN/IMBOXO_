@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>IMBOXO - Top Creators</title>
+  <title>IMBOXO - Home</title>
   <style>
     body {
       margin: 0;
@@ -19,11 +19,10 @@
       justify-content: space-between;
       border-bottom: 1px solid #32004d;
     }
-    header .logo {
+    .logo {
       font-size: 24px;
       font-weight: bold;
-      color: white;
-      text-shadow: 0 0 10px rgba(154, 0, 230, 0.4);
+      text-shadow: 0 0 10px rgba(154, 0, 230, 0.5);
     }
     nav a {
       color: white;
@@ -34,6 +33,7 @@
     nav a:hover {
       color: #9a00e6;
     }
+
     .section {
       padding: 40px;
       max-width: 1200px;
@@ -50,33 +50,44 @@
       flex-wrap: wrap;
       gap: 24px;
     }
+
     .card {
       background-color: #140022;
       border: 1px solid #250038;
-      border-radius: 12px;
+      border-radius: 20px;
       padding: 16px;
       text-align: center;
       width: 160px;
     }
+
     .card img {
       width: 120px;
       height: 120px;
-      border-radius: 16px;
+      border-radius: 20px;
       object-fit: cover;
       box-shadow: 0 0 15px #32004d;
-      transition: all 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out;
     }
+
     .card img:hover {
       transform: scale(1.05);
       box-shadow: 0 0 25px #9a00e6, 0 0 12px #4c0070 inset;
     }
+
     .card p {
       margin-top: 12px;
       font-size: 14px;
     }
+
+    .portrait {
+      width: 120px;
+      height: 180px;
+      border-radius: 20px;
+    }
   </style>
 </head>
 <body>
+
   <header>
     <div class="logo">IMBOXO</div>
     <nav>
@@ -96,44 +107,45 @@
         <p><strong>Sakura</strong></p>
       </div>
       <div class="card">
-        <img src="assets/Home/AvatarB.png" alt="Creator B">
-        <p>Creator B</p>
+        <img src="assets/Home/AvatarB.png" alt="Jordan">
+        <p>Jordan</p>
       </div>
       <div class="card">
-        <img src="assets/Home/AvatarC.png" alt="Creator C">
-        <p>Creator C</p>
+        <img src="assets/Home/AvatarC.png" alt="Lex">
+        <p>Lex</p>
       </div>
       <div class="card">
-        <img src="assets/Home/Avatar D.png" alt="Creator D">
-        <p>Creator D</p>
+        <img src="assets/Home/Avatar D.png" alt="Riley">
+        <p>Riley</p>
       </div>
       <div class="card">
-        <img src="assets/Home/AvatarE.png" alt="Creator E">
-        <p>Creator E</p>
+        <img src="assets/Home/AvatarE.png" alt="Taylor">
+        <p>Taylor</p>
       </div>
     </div>
   </div>
 
   <div class="section">
-    <h2>Timelines</h2>
+    <h2>Featured Timelines</h2>
     <div class="grid">
-      <div class="card"><img src="assets/Home/timeline_1.png" alt="Timeline 1"></div>
-      <div class="card"><img src="assets/Home/timeline_2.png" alt="Timeline 2"></div>
-      <div class="card"><img src="assets/Home/timeline_3.png" alt="Timeline 3"></div>
-      <div class="card"><img src="assets/Home/timeline_4.png" alt="Timeline 4"></div>
-      <div class="card"><img src="assets/Home/timeline_5.png" alt="Timeline 5"></div>
+      <div class="card"><img class="portrait" src="assets/Home/timeline_1.png" alt="Timeline 1"><p>Timeline 1</p></div>
+      <div class="card"><img class="portrait" src="assets/Home/timeline_2.png" alt="Timeline 2"><p>Timeline 2</p></div>
+      <div class="card"><img class="portrait" src="assets/Home/timeline_3.png" alt="Timeline 3"><p>Timeline 3</p></div>
+      <div class="card"><img class="portrait" src="assets/Home/timeline_4.png" alt="Timeline 4"><p>Timeline 4</p></div>
+      <div class="card"><img class="portrait" src="assets/Home/timeline_5.png" alt="Timeline 5"><p>Timeline 5</p></div>
     </div>
   </div>
 
   <div class="section">
     <h2>Discovery Zone</h2>
     <div class="grid">
-      <div class="card"><img src="assets/Home/discovery_1.png" alt="Discovery 1"></div>
-      <div class="card"><img src="assets/Home/discovery_2.png" alt="Discovery 2"></div>
-      <div class="card"><img src="assets/Home/discovery_3.png" alt="Discovery 3"></div>
-      <div class="card"><img src="assets/Home/discovery_4.png" alt="Discovery 4"></div>
-      <div class="card"><img src="assets/Home/discovery_5.png" alt="Discovery 5"></div>
+      <div class="card"><img class="portrait" src="assets/Home/discovery_1.png" alt="Discovery 1"><p>Discovery 1</p></div>
+      <div class="card"><img class="portrait" src="assets/Home/discovery_2.png" alt="Discovery 2"><p>Discovery 2</p></div>
+      <div class="card"><img class="portrait" src="assets/Home/discovery_3.png" alt="Discovery 3"><p>Discovery 3</p></div>
+      <div class="card"><img class="portrait" src="assets/Home/discovery_4.png" alt="Discovery 4"><p>Discovery 4</p></div>
+      <div class="card"><img class="portrait" src="assets/Home/discovery_5.png" alt="Discovery 5"><p>Discovery 5</p></div>
     </div>
   </div>
+
 </body>
 </html>
