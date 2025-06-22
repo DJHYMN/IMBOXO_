@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Equalizer Episode Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Top Nav */
+    nav {
+      background-color: #7e57c2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    nav .logo:hover {
+      transform: scale(1.1);
+      text-shadow: 0 0 12px #b366ff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: #eee;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #d9b3ff;
+    }
+
+    .video-preview {
+      width: 100%;
+      height: 500px;
+    }
+
+    .episode-container {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .description {
+      max-width: 800px;
+      text-align: center;
+      margin: 20px auto;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      margin: 20px auto;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .buttons button {
+      padding: 10px 20px;
+      background-color: #7e57c2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .buttons button:hover {
+      background-color: #9575cd;
+    }
+
+    .thumbnails {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .thumbnail img {
+      width: 180px;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid #333;
+    }
+
+    .thumbnail img:hover {
+      transform: scale(1.05) rotate(-1deg);
+      box-shadow: 0 0 15px #b366ff;
+      border-color: #b366ff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <nav>
+    <div class="logo">IMBOXO</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Episodes</a></li>
+      <li><a href="#">Creators</a></li>
+      <li><a href="#">My List</a></li>
+    </ul>
+  </nav>
+
+  <!-- Video Preview -->
+  <div class="video-preview">
+    <iframe width="100%" height="100%"
+      src="https://www.youtube.com/embed/qEVUtrk8_B4?autoplay=1&mute=1"
+      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <!-- Description + Buttons -->
+  <div class="episode-container">
+    <div class="description">
+      <h2>Episode 1: The iLL Technic</h2>
+      <p>
+        In this thrilling premiere, secrets unravel as dopness returns to face a new era of chaos.
+        Starring Roger Roth, Senor Ranger, and DJ Hymn.
+      </p>
+    </div>
+
+    <div class="buttons">
+      <button>Like</button>
+      <button>Dislike</button>
+      <button>Add to My List</button>
+      <button>Share</button>
+    </div>
+
+    <!-- Thumbnails -->
+    <div class="thumbnails">
+      <div class="thumbnail"><img src="assets/episode_1_thumbnail.png" alt="Episode 1"></div>
+      <div class="thumbnail"><img src="assets/episode_2_thumbnail.png" alt="Episode 2"></div>
+      <div class="thumbnail"><img src="assets/episode_3_thumbnail.png" alt="Episode 3"></div>
+    </div>
+  </div>
+
+</body>
+</html>
