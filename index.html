@@ -2,149 +2,173 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IMBOXO – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IMBOXO</title>
   <style>
     body {
       margin: 0;
-      background-color: #0a0a0a;
-      font-family: 'Helvetica Neue', sans-serif;
-      color: white;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
     }
-    header {
-      background-color: #0a0a0a;
-      padding: 20px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #32004d;
-    }
-    header .logo {
-      font-size: 24px;
-      color: white;
-      font-weight: bold;
-      transition: all 0.3s ease-in-out;
-      text-shadow: 0 0 10px rgba(154, 0, 230, 0.6);
-    }
-    header .logo:hover {
-      transform: scale(1.1);
-      text-shadow: 0 0 20px rgba(154, 0, 230, 0.8);
-    }
-    header nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 24px;
-      font-size: 16px;
-      transition: color 0.3s ease;
-    }
-    header nav a:hover {
-      color: #9a00e6;
-    }
+
     .container {
-      padding: 40px;
+      padding-left: 40px;
+      padding-right: 40px;
       max-width: 1400px;
-      margin: auto;
+      margin: 0 auto;
     }
-    .section-title {
-      font-size: 24px;
-      color: white;
+
+    h2.section-title {
+      margin-top: 60px;
       margin-bottom: 20px;
-      border-bottom: 1px solid #32004d;
-      padding-bottom: 8px;
     }
-    .creator-grid, .timeline-grid, .discovery-grid {
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    .grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 32px;
-      margin-bottom: 60px;
+      gap: 20px;
     }
-    .creator-tile {
-      width: 240px;
-      height: 240px;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 0 12px #32004d;
-      transition: all 0.4s ease-in-out;
-      position: relative;
-    }
-    .creator-tile img {
-      width: 100%;
-      height: 100%;
+
+    .avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #8e2de2;
+      box-shadow: 0 0 20px #8e2de2;
       object-fit: cover;
-      border-radius: 16px;
-      transition: all 0.4s ease-in-out;
+      transition: transform 0.3s;
     }
-    .creator-tile:hover {
+
+    .avatar:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 30px #9a00e6, 0 0 15px #4c0070 inset;
     }
-    .creator-tile:hover img {
-      filter: brightness(1.1) saturate(1.3);
+
+    .avatar-wrapper {
+      padding: 10px;
+      background: #1e1e1e;
+      border-radius: 20px;
+      box-shadow: 0 0 10px #8e2de2;
     }
-    .poster-tile {
-      width: 240px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 12px #32004d;
-      transition: all 0.3s ease-in-out;
+
+    .creator-link {
+      text-decoration: none;
     }
-    .timeline-grid .poster-tile img {
-      width: 100%;
-      height: 360px;
-      object-fit: cover;
-      border-radius: 12px;
+
+    .timeline-img,
+    .discovery-img {
+      border-radius: 8px;
+      box-shadow: 0 0 10px #000;
+      transition: transform 0.3s;
     }
-    .discovery-grid .poster-tile img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-    .poster-tile:hover {
-      box-shadow: 0 0 30px #9a00e6, 0 0 15px #4c0070 inset;
+
+    .timeline-img:hover,
+    .discovery-img:hover {
       transform: scale(1.03);
+    }
+
+    .timeline-img {
+      width: 170px;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .discovery-img {
+      width: 250px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000;
+      padding: 20px 40px;
+      border-bottom: 1px solid #8e2de2;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #c678f5;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #8e2de2;
     }
   </style>
 </head>
 <body>
+
   <header>
     <div class="logo">IMBOXO</div>
     <nav>
-      <a href="/home">Home</a>
-      <a href="/creators">Creators</a>
-      <a href="/timelines">Timelines</a>
-      <a href="/discovery">Discovery</a>
-      <a href="/about">About</a>
+      <a href="#">Home</a>
+      <a href="#">Creators</a>
+      <a href="#">Timelines</a>
+      <a href="#">Discovery</a>
+      <a href="#">About</a>
     </nav>
   </header>
 
- <h2 class="section-title">Creators</h2>
-<div class="creator-grid">
-  <a href="creator_sakura.html" class="creator-tile"><img src="assets/Home/avatar.png" alt="Creator 1"></a>
-  <div class="creator-tile"><img src="assets/Home/AvatarB.png" alt="Creator 2"></div>
-  <div class="creator-tile"><img src="assets/Home/AvatarC.png" alt="Creator 3"></div>
-  <div class="creator-tile"><img src="assets/Home/Avatar D.png" alt="Creator 4"></div>
-  <div class="creator-tile"><img src="assets/Home/AvatarE.png" alt="Creator 5"></div>
-</div>
-
-
-    <h2 class="section-title">Timelines</h2>
-    <div class="timeline-grid">
-      <div class="poster-tile"><img src="assets/Home/timeline_1.png" alt="Timeline 1"></div>
-      <div class="poster-tile"><img src="assets/Home/timeline_2.png" alt="Timeline 2"></div>
-      <div class="poster-tile"><img src="assets/Home/timeline_3.png" alt="Timeline 3"></div>
-      <div class="poster-tile"><img src="assets/Home/timeline_4.png" alt="Timeline 4"></div>
-      <div class="poster-tile"><img src="assets/Home/timeline_5.png" alt="Timeline 5"></div>
+  <div class="container">
+    <div class="section">
+      <h2 class="section-title">Creators</h2>
+      <div class="grid">
+        <a class="creator-link" href="sakura.html">
+          <div class="avatar-wrapper">
+            <img src="assets/Home/avatar.png" alt="Creator 1" class="avatar" />
+          </div>
+        </a>
+        <div class="avatar-wrapper">
+          <img src="assets/Home/AvatarB.png" alt="Creator 2" class="avatar" />
+        </div>
+        <div class="avatar-wrapper">
+          <img src="assets/Home/AvatarC.png" alt="Creator 3" class="avatar" />
+        </div>
+        <div class="avatar-wrapper">
+          <img src="assets/Home/AvatarD.png" alt="Creator 4" class="avatar" />
+        </div>
+        <div class="avatar-wrapper">
+          <img src="assets/Home/AvatarE.png" alt="Creator 5" class="avatar" />
+        </div>
+      </div>
     </div>
 
-    <h2 class="section-title">Discovery Zone</h2>
-    <div class="discovery-grid">
-      <div class="poster-tile"><img src="assets/Home/discovery_1.png" alt="Discovery 1"></div>
-      <div class="poster-tile"><img src="assets/Home/discovery_2.png" alt="Discovery 2"></div>
-      <div class="poster-tile"><img src="assets/Home/discovery_3.png" alt="Discovery 3"></div>
-      <div class="poster-tile"><img src="assets/Home/discovery_4.png" alt="Discovery 4"></div>
-      <div class="poster-tile"><img src="assets/Home/discovery_5.png" alt="Discovery 5"></div>
+    <div class="section">
+      <h2 class="section-title">Timelines</h2>
+      <div class="grid">
+        <img src="assets/Home/timeline_1.png" alt="Timeline 1" class="timeline-img" />
+        <img src="assets/Home/timeline_2.png" alt="Timeline 2" class="timeline-img" />
+        <img src="assets/Home/timeline_3.png" alt="Timeline 3" class="timeline-img" />
+        <img src="assets/Home/timeline_4.png" alt="Timeline 4" class="timeline-img" />
+        <img src="assets/Home/timeline_5.png" alt="Timeline 5" class="timeline-img" />
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Discovery Zone</h2>
+      <div class="grid">
+        <img src="assets/Home/discovery_1.png" alt="Discovery 1" class="discovery-img" />
+        <img src="assets/Home/discovery_2.png" alt="Discovery 2" class="discovery-img" />
+        <img src="assets/Home/discovery_3.png" alt="Discovery 3" class="discovery-img" />
+        <img src="assets/Home/discovery_4.png" alt="Discovery 4" class="discovery-img" />
+        <img src="assets/Home/discovery_5.png" alt="Discovery 5" class="discovery-img" />
+      </div>
     </div>
   </div>
+
 </body>
 </html>
