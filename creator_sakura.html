@@ -3,109 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Equalizer Episode Page</title>
+  <title>Sakura – Creator Spotlight</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #eee;
       margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #32004d;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 30px;
-      border-bottom: 2px solid #4c0070;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
+      background-color: #0a0a0a;
+      font-family: 'Helvetica Neue', sans-serif;
       color: white;
-      transition: transform 0.3s ease, text-shadow 0.3s ease;
-      text-shadow: 0 0 10px rgba(154, 0, 230, 0.4);
     }
-
-    .logo:hover {
-      transform: scale(1.1);
-      text-shadow: 0 0 20px rgba(154, 0, 230, 0.7);
+    header {
+      background-color: #0a0a0a;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #32004d;
     }
-
-    nav a {
+    header .logo {
+      font-size: 24px;
+      color: white;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+      text-shadow: 0 0 10px rgba(154, 0, 230, 0.3);
+    }
+    header .logo:hover {
+      transform: scale(1.08);
+      text-shadow: 0 0 20px rgba(154, 0, 230, 0.6);
+    }
+    header nav a {
       color: white;
       text-decoration: none;
       margin-left: 24px;
       font-size: 16px;
       transition: color 0.3s ease;
     }
-
-    nav a:hover {
-      color: #d58eff;
+    header nav a:hover {
+      color: #9a00e6;
     }
-
-    .video-preview {
-      width: 100%;
-      height: 500px;
+    .container {
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
     }
-
-    .episode-container {
-      padding: 20px;
+    .header {
       display: flex;
-      flex-direction: column;
       align-items: center;
+      gap: 40px;
     }
-
-    .description {
-      max-width: 800px;
-      text-align: center;
-      margin: 20px auto;
-      line-height: 1.6;
+    .creator-photo {
+      border-radius: 16px;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      box-shadow: 0 0 12px #32004d;
+      transition: all 0.4s ease-in-out;
+      position: relative;
     }
-
-    .buttons {
-      margin: 20px auto;
+    .creator-photo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #9a00e6, 0 0 15px #4c0070 inset;
+      filter: brightness(1.1) saturate(1.3);
+    }
+    .main-info h1 {
+      font-size: 48px;
+      margin: 0;
+      color: #ffffff;
+    }
+    .main-info p {
+      font-size: 16px;
+      color: #ccc;
+    }
+    .meta-section, .projects-section {
+      margin-top: 40px;
+    }
+    .meta-section h2, .projects-section h2 {
+      font-size: 24px;
+      border-bottom: 1px solid #32004d;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+    .meta-list, .project-thumbnails {
       display: flex;
-      gap: 20px;
-      justify-content: center;
+      flex-wrap: wrap;
+      gap: 24px;
     }
-
+    .meta-item {
+      background-color: #140022;
+      padding: 16px;
+      border-radius: 12px;
+      width: 250px;
+      border: 1px solid #250038;
+    }
+    .thumbnail {
+      width: 180px;
+      height: 270px;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 0 10px #250038;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+    }
+    .thumbnail:hover {
+      transform: scale(1.08) rotate(1deg);
+      box-shadow: 0 0 25px #8a00c2, 0 0 15px #3c0068 inset;
+      filter: brightness(1.1) contrast(1.05);
+    }
+    .buttons {
+      margin-top: 24px;
+      display: flex;
+      gap: 16px;
+    }
     .buttons button {
-      padding: 10px 20px;
-      background-color: #7e57c2;
+      background-color: #32004d;
       color: white;
       border: none;
+      padding: 12px 24px;
       border-radius: 8px;
       font-size: 16px;
       cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
-
     .buttons button:hover {
-      background-color: #9575cd;
-    }
-
-    .thumbnails {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .thumbnail {
-      width: 180px;
-      border-radius: 12px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-      border: 2px solid #444;
-    }
-
-    .thumbnail:hover {
-      transform: scale(1.05) rotate(0.5deg);
-      box-shadow: 0 0 20px rgba(154, 0, 230, 0.5);
-      border-color: #9a00e6;
+      background-color: #5a0080;
+      transform: translateY(-2px);
     }
   </style>
 </head>
@@ -121,37 +142,45 @@
     </nav>
   </header>
 
-  <div class="video-preview">
-    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/qEVUtrk8_B4?autoplay=1&mute=1" 
-      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  </div>
+  <div class="container">
+    <div class="header">
+      <img class="creator-photo" src="assets/Sakura/avatar.png" alt="Sakura portrait">
+      <div class="main-info">
+        <h1>Sakura</h1>
+        <p>Filmmaker · Storyteller · Visual Artist</p>
+        <p>Active Since: 2017 · Genre Focus: Short Films · Documentaries · Art Films</p>
+        <div class="buttons">
+          <button>Support This Creator</button>
+          <button>Add to My Watchlist</button>
+          <button>Share Profile</button>
+        </div>
+      </div>
+    </div>
 
-  <div class="episode-container">
-    <div class="description">
-      <h2>Episode 1: The iLL Technic</h2>
+    <div class="meta-section">
+      <h2>About Sakura</h2>
       <p>
-        In this thrilling premiere, secrets unravel as dopness returns to face a new era of chaos.
-        Starring Roger Roth, Senor Ranger, and DJ Hymn.
+        Sakura is an independent filmmaker and multimedia creator known for her emotionally resonant storytelling,
+        experimental visuals, and global perspective. Her work often explores identity, memory, and the poetic in everyday life.
       </p>
     </div>
 
-    <div class="buttons">
-      <button>Like</button>
-      <button>Dislike</button>
-      <button>Add to My List</button>
-      <button>Share</button>
+    <div class="meta-section">
+      <h2>Creative Profile</h2>
+      <div class="meta-list">
+        <div class="meta-item"><strong>Languages:</strong><br>English, Japanese, Visual Narrative</div>
+        <div class="meta-item"><strong>Signature Style:</strong><br>Minimalist · Surreal · Emotional Realism</div>
+        <div class="meta-item"><strong>Festival Features:</strong><br>Sundance · Short of the Week · BFI Flare</div>
+      </div>
     </div>
 
-    <div class="thumbnails">
-      <a href="seriesprreview.html">
-        <img src="episode_1_thumbnail.png" alt="Episode 1 Thumbnail" class="thumbnail" />
-      </a>
-      <a href="#">
-        <img src="episode_2_thumbnail.png" alt="Episode 2 Thumbnail" class="thumbnail" />
-      </a>
-      <a href="#">
-        <img src="episode_3_thumbnail.png" alt="Episode 3 Thumbnail" class="thumbnail" />
-      </a>
+    <div class="projects-section">
+      <h2>Featured Projects</h2>
+      <div class="project-thumbnails">
+        <img class="thumbnail" src="assets/Sakura/thumb1.png" alt="Audition Thumbnail">
+        <img class="thumbnail" src="assets/Sakura/thumb2.png" alt="The Snow Woman Thumbnail">
+        <img class="thumbnail" src="assets/Sakura/thumb3.png" alt="Ichi The Killer Thumbnail">
+      </div>
     </div>
   </div>
 </body>
