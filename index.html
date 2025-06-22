@@ -7,154 +7,117 @@
   <style>
     body {
       margin: 0;
-      background-color: #000;
       font-family: 'Helvetica Neue', sans-serif;
+      background-color: #0a0a0a;
       color: white;
     }
-
     header {
-      background-color: #0a0a0a;
       padding: 20px 40px;
+      background-color: #0a0a0a;
+      border-bottom: 1px solid #32004d;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
-
     .logo {
-      font-size: 28px;
+      font-size: 24px;
       font-weight: bold;
       color: white;
-      transition: transform 0.3s ease, text-shadow 0.3s ease;
+      text-shadow: 0 0 10px rgba(154, 0, 230, 0.5);
     }
-
-    .logo:hover {
-      transform: scale(1.05);
-      text-shadow: 0 0 12px #b266ff;
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s ease;
     }
-
+    nav a:hover {
+      color: #9a00e6;
+    }
     .section {
       padding: 40px;
     }
-
     .section h2 {
-      font-size: 28px;
-      border-bottom: 2px solid #32004d;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
+      font-size: 24px;
+      border-bottom: 1px solid #32004d;
+      padding-bottom: 8px;
+      margin-bottom: 24px;
     }
-
     .grid {
       display: flex;
       flex-wrap: wrap;
       gap: 24px;
     }
-
-    .creator, .timeline, .discovery {
-      position: relative;
+    .creator-card {
       width: 180px;
-      height: 180px;
-      overflow: hidden;
+      text-align: center;
+      background-color: #140022;
       border-radius: 12px;
-      cursor: pointer;
+      padding: 16px;
+      border: 1px solid #32004d;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
-    .creator img, .timeline img, .discovery img {
+    .creator-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 20px #9a00e6;
+    }
+    .creator-card img {
       width: 100%;
-      height: 100%;
+      height: 180px;
       object-fit: cover;
-      display: block;
-      transition: transform 0.3s ease, filter 0.3s ease;
+      border-radius: 8px;
+      margin-bottom: 12px;
     }
-
-    .creator:hover img, .discovery:hover img {
-      transform: scale(1.08);
-      box-shadow: 0 0 20px #a64dff;
-      filter: brightness(1.2) saturate(1.2);
+    .creator-card a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
     }
-
-    .timeline {
-      height: 270px;
-    }
-
-    .timeline img {
-      border-radius: 12px;
-      transition: all 0.3s ease;
-    }
-
-    .timeline:hover img {
-      transform: scale(1.05) rotate(0.5deg);
-      filter: brightness(1.1) contrast(1.05);
-      box-shadow: 0 0 20px #4d00b2;
+    .creator-card a:hover {
+      color: #bb7aff;
     }
   </style>
 </head>
 <body>
+
   <header>
     <div class="logo">IMBOXO</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="creators.html">Creators</a>
+      <a href="timelines.html">Timelines</a>
+      <a href="discovery.html">Discovery</a>
+      <a href="about.html">About</a>
+    </nav>
   </header>
 
   <div class="section">
     <h2>Top Creators</h2>
     <div class="grid">
-      <div class="creator" onclick="window.location.href='creator_sakura.html'">
-        <img src="assets/Home/avatar1.png" alt="Creator 1" />
+      <div class="creator-card">
+        <a href="creator_sakura.html">
+          <img src="assets/Home/avatar.png" alt="Sakura Avatar">
+          <div>Sakura</div>
+        </a>
       </div>
-      <div class="creator">
-        <img src="assets/Home/avatar2.png" alt="Creator 2" />
+      <div class="creator-card">
+        <img src="assets/Home/AvatarB.png" alt="Avatar B">
+        <div>Creator B</div>
       </div>
-      <div class="creator">
-        <img src="assets/Home/avatar3.png" alt="Creator 3" />
+      <div class="creator-card">
+        <img src="assets/Home/AvatarC.png" alt="Avatar C">
+        <div>Creator C</div>
       </div>
-      <div class="creator">
-        <img src="assets/Home/avatar4.png" alt="Creator 4" />
+      <div class="creator-card">
+        <img src="assets/Home/Avatar D.png" alt="Avatar D">
+        <div>Creator D</div>
       </div>
-      <div class="creator">
-        <img src="assets/Home/avatar5.png" alt="Creator 5" />
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Timelines</h2>
-    <div class="grid">
-      <div class="timeline">
-        <img src="assets/Home/timeline_1.png" alt="Timeline 1" />
-      </div>
-      <div class="timeline">
-        <img src="assets/Home/timeline_2.png" alt="Timeline 2" />
-      </div>
-      <div class="timeline">
-        <img src="assets/Home/timeline_3.png" alt="Timeline 3" />
-      </div>
-      <div class="timeline">
-        <img src="assets/Home/timeline_4.png" alt="Timeline 4" />
-      </div>
-      <div class="timeline">
-        <img src="assets/Home/timeline_5.png" alt="Timeline 5" />
+      <div class="creator-card">
+        <img src="assets/Home/AvatarE.png" alt="Avatar E">
+        <div>Creator E</div>
       </div>
     </div>
   </div>
 
-  <div class="section">
-    <h2>Discovery Zone</h2>
-    <div class="grid">
-      <div class="discovery">
-        <img src="assets/Home/discovery_1.png" alt="Discovery 1" />
-      </div>
-      <div class="discovery">
-        <img src="assets/Home/discovery_2.png" alt="Discovery 2" />
-      </div>
-      <div class="discovery">
-        <img src="assets/Home/discovery_3.png" alt="Discovery 3" />
-      </div>
-      <div class="discovery">
-        <img src="assets/Home/discovery_4.png" alt="Discovery 4" />
-      </div>
-      <div class="discovery">
-        <img src="assets/Home/discovery_5.png" alt="Discovery 5" />
-      </div>
-    </div>
-  </div>
 </body>
 </html>
