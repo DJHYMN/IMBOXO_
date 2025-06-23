@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +11,7 @@
       font-family: 'Helvetica Neue', sans-serif;
       color: white;
     }
+
     header {
       background-color: #0a0a0a;
       padding: 20px 40px;
@@ -20,6 +20,7 @@
       justify-content: space-between;
       border-bottom: 1px solid #32004d;
     }
+
     header .logo {
       font-size: 24px;
       color: white;
@@ -27,10 +28,12 @@
       text-shadow: 0 0 10px rgba(154, 0, 230, 0.6);
       transition: all 0.3s ease-in-out;
     }
+
     header .logo:hover {
       transform: scale(1.1);
       text-shadow: 0 0 20px rgba(154, 0, 230, 0.8);
     }
+
     header nav a {
       color: white;
       text-decoration: none;
@@ -38,12 +41,15 @@
       font-size: 16px;
       transition: color 0.3s ease;
     }
+
     header nav a:hover {
       color: #9a00e6;
     }
+
     .main-container {
       padding: 40px;
     }
+
     .section-title {
       font-size: 36px;
       font-weight: bold;
@@ -52,31 +58,40 @@
       border-bottom: 1px solid #32004d;
       padding-bottom: 8px;
     }
+
     .discovery-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 32px;
       justify-content: center;
     }
+
     .poster-tile {
       width: 360px;
       height: 240px;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 0 12px #32004d;
-      transition: all 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000;
     }
+
     .poster-tile img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       border-radius: 12px;
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
+
     .poster-tile:hover img {
       transform: scale(1.05);
-      box-shadow: 0 0 20px #9a00e6, 0 0 10px #4c0070 inset;
+      box-shadow: 0 0 20px rgba(154, 0, 230, 0.6);
     }
+
   </style>
 </head>
 <body>
@@ -103,7 +118,6 @@
       <div class="poster-tile"><img src="assets/discovery/discovery_7.png" alt="Discovery 7"></div>
       <div class="poster-tile"><img src="assets/discovery/discovery_8.png" alt="Discovery 8"></div>
       <div class="poster-tile"><img src="assets/discovery/discovery_9.png" alt="Discovery 9"></div>
-
     </div>
   </div>
 </body>
