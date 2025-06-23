@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMBOXO – Timelines</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0a0a0a;
+      font-family: 'Helvetica Neue', sans-serif;
+      color: white;
+    }
+    header {
+      background-color: #0a0a0a;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #32004d;
+    }
+    header .logo {
+      font-size: 24px;
+      color: white;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+      text-shadow: 0 0 10px rgba(154, 0, 230, 0.6);
+    }
+    header .logo:hover {
+      transform: scale(1.1);
+      text-shadow: 0 0 20px rgba(154, 0, 230, 0.8);
+    }
+    .page-title {
+      text-align: center;
+      font-size: 36px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: white;
+      text-shadow: 0 0 8px rgba(154, 0, 230, 0.5);
+    }
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 32px;
+      padding: 40px;
+      max-width: 1400px;
+      margin: auto;
+    }
+    .poster-tile {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 12px #32004d;
+      transition: all 0.3s ease-in-out;
+    }
+    .poster-tile img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+    .poster-tile:hover {
+      box-shadow: 0 0 30px #9a00e6, 0 0 15px #4c0070 inset;
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="https://djhymn.github.io/IMBOXO_/" class="logo">IMBOXO</a>
+  </header>
+
+  <div class="page-title">Timelines</div>
+
+  <div class="timeline-grid">
+    <div class="poster-tile"><img src="assets/timelines/timeline_1.png" alt="Timeline 1"></div>
+    <div class="poster-tile"><img src="assets/timelines/timeline_2.png" alt="Timeline 2"></div>
+    <div class="poster-tile"><img src="assets/timelines/timeline_3.png" alt="Timeline 3"></div>
+    <div class="poster-tile"><img src="assets/timelines/timeline_4.png" alt="Timeline 4"></div>
+    <div class="poster-tile"><img src="assets/timelines/timeline_5.png" alt="Timeline 5"></div>
+    <div class="poster-tile"><img src="assets/timelines/timeline_6.png" alt="Timeline 6"></div>
+    <div class="poster-tile"><img src="assets/timelines/timeline_7.png" alt="Timeline 7"></div>
+    <div class="poster-tile"><img src="assets/timelines/timeline_8.png" alt="Timeline 8"></div>
+    <div class="poster-tile"><img src="assets/timelines/timeline_9.png" alt="Timeline 9"></div>
+    <div class="poster-tile"><img src="assets/timelines/timeline_10.png" alt="Timeline 10"></div>
+  </div>
+</body>
+</html>
