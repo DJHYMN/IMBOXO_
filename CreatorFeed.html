@@ -13,24 +13,60 @@
       color: #fff;
     }
 
+    /* Branded nav from home */
     header {
+      background-color: #0a0a0a;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #32004d;
+    }
+
+    header .logo {
+      font-size: 24px;
+      color: white;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+      text-shadow: 0 0 10px rgba(154, 0, 230, 0.6);
+    }
+
+    header .logo:hover {
+      transform: scale(1.1);
+      text-shadow: 0 0 20px rgba(154, 0, 230, 0.8);
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+      color: #9a00e6;
+    }
+
+    /* Hero heading */
+    .hero {
       text-align: center;
       padding: 40px 20px 20px;
     }
 
-    header h1 {
+    .hero h1 {
       font-size: 48px;
       margin: 0;
       color: #fff;
       transition: all 0.4s ease-in-out;
     }
 
-    header h1:hover {
+    .hero h1:hover {
       transform: scale(1.05);
       text-shadow: 0 0 20px rgba(154, 0, 230, 0.9), 0 0 40px rgba(154, 0, 230, 0.6);
     }
 
-    header p {
+    .hero p {
       font-size: 18px;
       color: #ccc;
       margin-top: 12px;
@@ -60,9 +96,20 @@
 <body>
 
   <header>
+    <a href="https://djhymn.github.io/IMBOXO_/" class="logo">IMBOXO</a>
+    <nav>
+      <a href="/home">Home</a>
+      <a href="/creators">Creators</a>
+      <a href="/timelines">Timelines</a>
+      <a href="/discovery">Discovery</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+
+  <div class="hero">
     <h1>Creator Feed</h1>
     <p>A showcase of the freshest creators lighting up the box.</p>
-  </header>
+  </div>
 
   <div class="tiktok-wrapper">
     <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@brookemonk_/video/7517010914571259167" data-video-id="7517010914571259167" style="min-width: 325px; max-width: 430px;" muted autoplay>
