@@ -68,21 +68,18 @@
 
     .poster-tile {
       width: 360px;
-      height: 240px;
+      height: 200px; /* tightened from 240px */
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 0 12px #32004d;
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       background-color: #000;
     }
 
     .poster-tile img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover; /* cover fixes padding issue */
       border-radius: 12px;
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
