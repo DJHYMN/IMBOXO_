@@ -68,7 +68,7 @@
 
     .poster-tile {
       width: 360px;
-      height: 200px; /* tightened from 240px */
+      height: 200px;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 0 12px #32004d;
@@ -79,14 +79,17 @@
     .poster-tile img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* cover fixes padding issue */
+      object-fit: cover;
       border-radius: 12px;
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
 
     .poster-tile:hover img {
       transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(154, 0, 230, 0.6);
+      box-shadow:
+        0 0 15px rgba(154, 0, 230, 0.4),
+        0 0 30px rgba(154, 0, 230, 0.2),
+        0 0 10px rgba(154, 0, 230, 0.2) inset;
     }
 
   </style>
