@@ -79,8 +79,7 @@
     }
 
     .creator-grid,
-    .timeline-grid,
-    .discovery-grid {
+    .timeline-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 32px;
@@ -118,8 +117,8 @@
       width: 240px;
       border-radius: 12px;
       overflow: hidden;
-      background-color: #000;
-      transition: transform 0.3s ease-in-out;
+      box-shadow: 0 0 12px #32004d;
+      transition: all 0.3s ease-in-out;
     }
 
     .timeline-grid .poster-tile img {
@@ -129,31 +128,44 @@
       border-radius: 12px;
     }
 
-   .discovery-grid .poster-tile {
-  width: 240px;
-  height: 140px;
-  border-radius: 12px;
-  overflow: hidden;
-  background-color: #000;
-  transition: transform 0.3s ease-in-out;
-}
+    /* --- DISCOVERY ZONE THUMBNAILS ONLY --- */
+    .discovery-grid {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 60px;
+    }
 
-.discovery-grid .poster-tile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: all 0.4s ease-in-out;
-  box-shadow: 0 0 12px #32004d;
-}
+    .discovery-grid .poster-tile {
+      width: 240px;
+      height: 140px;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      background-color: #000;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 0 16px rgba(154, 0, 230, 0.3);
+    }
 
-.discovery-grid .poster-tile:hover img {
-  transform: scale(1.08) rotate(1deg);
-  box-shadow:
-    0 0 25px #8a00c2,
-    0 0 15px #3c0068 inset;
-  filter: brightness(1.1) contrast(1.05);
-}
+    .discovery-grid .poster-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+      transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    }
+
+    .discovery-grid .poster-tile:hover {
+      transform: scale(1.04) rotate(1.5deg);
+      box-shadow:
+        0 0 25px #8a00c2,
+        0 0 18px #5e00aa inset;
+    }
+
+    .discovery-grid .poster-tile:hover img {
+      transform: scale(1.1);
+      filter: brightness(1.15) contrast(1.08) saturate(1.2);
+      box-shadow: 0 0 32px #a100ff, 0 0 16px #52007e inset;
+    }
   </style>
 </head>
 <body>
@@ -196,24 +208,15 @@
       <span>Discovery Zone</span>
       <a href="discoveryzone.html" class="view-all">View All</a>
     </div>
-   <div class="discovery-grid">
-  <a href="seriesprreview.html" class="poster-tile">
-    <img src="assets/Home/discovery_1.png" alt="Discovery 1">
-  </a>
-  <div class="poster-tile">
-    <img src="assets/Home/discovery_2.png" alt="Discovery 2">
+    <div class="discovery-grid">
+      <a href="seriesprreview.html" class="poster-tile">
+        <img src="assets/Home/discovery_1.png" alt="Discovery 1">
+      </a>
+      <div class="poster-tile"><img src="assets/Home/discovery_2.png" alt="Discovery 2"></div>
+      <div class="poster-tile"><img src="assets/Home/discovery_3.png" alt="Discovery 3"></div>
+      <div class="poster-tile"><img src="assets/Home/discovery_4.png" alt="Discovery 4"></div>
+      <div class="poster-tile"><img src="assets/Home/discovery_5.png" alt="Discovery 5"></div>
+    </div>
   </div>
-  <div class="poster-tile">
-    <img src="assets/Home/discovery_3.png" alt="Discovery 3">
-  </div>
-  <div class="poster-tile">
-    <img src="assets/Home/discovery_4.png" alt="Discovery 4">
-  </div>
-  <div class="poster-tile">
-    <img src="assets/Home/discovery_5.png" alt="Discovery 5">
-  </div>
-</div>
-</div> <!-- closes main-container -->
 </body>
 </html>
-
