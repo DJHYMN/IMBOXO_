@@ -126,6 +126,19 @@
       height: 360px;
       object-fit: cover;
       border-radius: 12px;
+      transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    }
+
+    /* TIMELINE HOVER GLOW EFFECT */
+    .timeline-grid .poster-tile:hover {
+      transform: scale(1.04) rotate(1.5deg);
+      box-shadow: 0 0 25px #8a00c2, 0 0 18px #5e00aa inset;
+    }
+
+    .timeline-grid .poster-tile:hover img {
+      transform: scale(1.1);
+      filter: brightness(1.15) contrast(1.08) saturate(1.2);
+      box-shadow: 0 0 32px #a100ff, 0 0 16px #52007e inset;
     }
 
     /* --- DISCOVERY ZONE THUMBNAILS ONLY --- */
@@ -156,9 +169,7 @@
 
     .discovery-grid .poster-tile:hover {
       transform: scale(1.04) rotate(1.5deg);
-      box-shadow:
-        0 0 25px #8a00c2,
-        0 0 18px #5e00aa inset;
+      box-shadow: 0 0 25px #8a00c2, 0 0 18px #5e00aa inset;
     }
 
     .discovery-grid .poster-tile:hover img {
