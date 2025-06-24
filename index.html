@@ -11,6 +11,7 @@
       font-family: 'Helvetica Neue', sans-serif;
       color: white;
     }
+
     header {
       background-color: #0a0a0a;
       padding: 20px 40px;
@@ -19,6 +20,7 @@
       justify-content: space-between;
       border-bottom: 1px solid #32004d;
     }
+
     header .logo {
       font-size: 24px;
       color: white;
@@ -26,10 +28,12 @@
       transition: all 0.3s ease-in-out;
       text-shadow: 0 0 10px rgba(154, 0, 230, 0.6);
     }
+
     header .logo:hover {
       transform: scale(1.1);
       text-shadow: 0 0 20px rgba(154, 0, 230, 0.8);
     }
+
     header nav a {
       color: white;
       text-decoration: none;
@@ -37,44 +41,52 @@
       font-size: 16px;
       transition: color 0.3s ease;
     }
+
     header nav a:hover {
       color: #9a00e6;
     }
+
     .main-container {
-      padding-left: 40px;
+      padding: 60px 40px 40px 40px; /* Extra space on top now */
     }
-    .container {
-      padding: 40px;
-      max-width: 1400px;
-      margin: auto;
-    }
-   .section-title {
+
+    .section-title {
       font-size: 36px;
       font-weight: bold;
       color: white;
-      margin-bottom: 32px;
+      margin-bottom: 20px;
       border-bottom: 1px solid #32004d;
       padding-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
+
     .view-all {
       font-size: 14px;
+      font-weight: bold;
       color: #ccc;
       cursor: pointer;
       text-transform: uppercase;
       letter-spacing: 1px;
       transition: all 0.3s ease-in-out;
     }
+
     .view-all:hover {
       color: #ffffff;
       text-shadow: 0 0 10px rgba(154, 0, 230, 0.7);
       transform: scale(1.05);
     }
-    .creator-grid, .timeline-grid, .discovery-grid {
+
+    .creator-grid,
+    .timeline-grid,
+    .discovery-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 32px;
       margin-bottom: 60px;
     }
+
     .creator-tile {
       width: 240px;
       height: 240px;
@@ -84,6 +96,7 @@
       transition: all 0.4s ease-in-out;
       position: relative;
     }
+
     .creator-tile img {
       width: 100%;
       height: 100%;
@@ -91,13 +104,16 @@
       border-radius: 16px;
       transition: all 0.4s ease-in-out;
     }
+
     .creator-tile:hover {
       transform: scale(1.05);
       box-shadow: 0 0 30px #9a00e6, 0 0 15px #4c0070 inset;
     }
+
     .creator-tile:hover img {
       filter: brightness(1.1) saturate(1.3);
     }
+
     .poster-tile {
       width: 240px;
       border-radius: 12px;
@@ -105,18 +121,21 @@
       box-shadow: 0 0 12px #32004d;
       transition: all 0.3s ease-in-out;
     }
+
     .timeline-grid .poster-tile img {
       width: 100%;
       height: 360px;
       object-fit: cover;
       border-radius: 12px;
     }
+
     .discovery-grid .poster-tile img {
       width: 100%;
       height: 240px;
       object-fit: cover;
       border-radius: 12px;
     }
+
     .poster-tile:hover {
       box-shadow: 0 0 30px #9a00e6, 0 0 15px #4c0070 inset;
       transform: scale(1.03);
